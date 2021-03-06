@@ -47,4 +47,14 @@ class InviteRepository extends BaseRepository implements InviteRepositoryInterfa
 
         return $code;
     }
+
+    public function referenceCodeExist($code)
+    {
+        return $this->model::where('code', $code)->where('redeemed', 1)->first();
+    }
+
+    public function findByEmail($email)
+    {
+        return $this->model::where('email', $email)->where('created_by', auth()->id())->first();
+    }
 }

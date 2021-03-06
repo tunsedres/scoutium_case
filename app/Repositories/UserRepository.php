@@ -31,6 +31,6 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
     public function create($attributes): Model
     {
         $attributes['password'] = bcrypt($attributes['password']);
-        return $this->model->create($attributes);
+        return $this->createNew($attributes);
     }
 }

@@ -9,6 +9,8 @@ services:
       - ./:/var/www/html
     ports:
     - "8888:80"
+    depends_on:
+      - db
     command: ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
   db:

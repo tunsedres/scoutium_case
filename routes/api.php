@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 /** Token free paths */
-Route::post('/register', ["\App\Http\Controllers\Api\Auth\RegisterController", "register"]);
+Route::post('/register', ["\App\Http\Controllers\Api\Auth\RegisterController", "register"])->middleware('verifyRefenceCode');
 Route::post('/login', ["\App\Http\Controllers\Api\Auth\LoginController", "login"]);
 
 

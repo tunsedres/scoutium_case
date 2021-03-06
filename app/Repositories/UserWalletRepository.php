@@ -34,4 +34,9 @@ class UserWalletRepository extends BaseRepository implements UserWalletRepositor
     {
         return $this->model::where('user_id', $userId)->increment('amount', $amount);
     }
+
+    public function create(array $attributes)
+    {
+        // TODO: Implement create() method.
+    }
 }

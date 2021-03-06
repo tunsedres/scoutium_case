@@ -34,6 +34,7 @@ class InviteCreated extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->view('emails.user_invite');
+        return $this->view('emails.user_invite')
+            ->subject('You are invited to join scoutium!');
     }
 }
