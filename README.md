@@ -16,7 +16,7 @@ This application consists of following modules;
 - mysql
 - redis queue
 - laravel horizon (for displaying queues and errors)
-- mailtrap for sending emails as fake
+- mailtrap for sending emails as fake(you can set your mailtrap credentials)
 - docker
 
 
@@ -24,4 +24,6 @@ This application consists of following modules;
 1. Go to the project folder 
 2. Run "composer install" on the command line
 3. Up docker-containers with command "docker-compose up --build -d"
+4. docker exec -it php8 bash and run php artisan migrate
+it is done!
 
