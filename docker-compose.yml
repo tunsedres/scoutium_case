@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  php:
+    build:
+      context: .
+    container_name: php8
+    volumes:
+      - ./:/var/www/html
+    ports:
+    - "8888:80"
+    command: ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
+  db:
+    image: mysql:5.7
+    container_name: s_mysql
+    restart: always
+    environment:
+        MYSQL_DATABASE: 'scoutium'
+        MYSQL_USER: 'dev'
+        MYSQL_PASSWORD: '123456'
+        MYSQL_ROOT_PASSWORD: '123456'
+    ports:
+      - '6060:3306'
+
+
