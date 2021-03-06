@@ -9,5 +9,10 @@ class UserInvitation extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['code', 'created_by','email'];
+    protected $fillable = ['code', 'created_by','email','redeemed'];
+
+    public function referenceUser()
+    {
+        return $this->belongsTo('App\Models\User', 'created_by');
+    }
 }

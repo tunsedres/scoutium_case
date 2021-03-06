@@ -35,10 +35,8 @@ class RegisterController extends Controller
 
         $createdUser = $this->userRepository->create($request->all());
 
-        if(request('reference_code')){
-            //trigger event
-            event(new UserCreated($createdUser));
-        }
+        //trigger event
+        event(new UserCreated($createdUser));
 
         Auth::attempt($request->only(['email','password']));
 

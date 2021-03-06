@@ -30,6 +30,8 @@ class InvitationController extends Controller
             'email' => 'required|email'
         ]);
 
+        //@todo: if this user generate a code for tthis email return a gentle error
+
         $invitation = $this->inviteRepository->create(request()->only('email'));
 
         if($invitation) {

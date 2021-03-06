@@ -28,6 +28,11 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Repositories\InviteRepository'
         );
 
+        $this->app->bind(
+            'App\Repositories\UserWalletRepositoryInterface',
+            'App\Repositories\UserWalletRepository'
+        );
+
     }
 
     /**

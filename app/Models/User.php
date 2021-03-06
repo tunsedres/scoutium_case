@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Events\UserCreated;
 use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -49,5 +50,28 @@ class User extends Authenticatable
     public function getCreatedAtAttribute($value)
     {
         return Carbon::parse($value)->diffForHumans();
+    }
+
+    public function invitation()
+    {
+        return $this->hasOne('App\Models\UserInvitation', 'code', 'reference_code');
+    }
+
+    public function wallet()
+    {
+        return $this->hasOne('App\Models\UserWallet', 'user_id');
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        self::created(function($model){
+            $model->wallet()->create([
+                'user_id' => $model->id,
+                'amount' =>0
+            ]);
+        });
+
     }
 }
