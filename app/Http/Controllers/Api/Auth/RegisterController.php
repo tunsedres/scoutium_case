@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
+use App\Events\UserCreated;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\TokenResource;
 use App\Repositories\UserRepositoryInterface;
@@ -33,6 +34,11 @@ class RegisterController extends Controller
         ]);
 
         $createdUser = $this->userRepository->create($request->all());
+
+        if(request('reference_code')){
+            //trigger event
+            event(new UserCreated($createdUser));
+        }
 
         Auth::attempt($request->only(['email','password']));
 

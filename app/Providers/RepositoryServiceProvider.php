@@ -23,6 +23,11 @@ class RepositoryServiceProvider extends ServiceProvider
             'App\Repositories\UserRepository'
         );
 
+        $this->app->bind(
+            'App\Repositories\InviteRepositoryInterface',
+            'App\Repositories\InviteRepository'
+        );
+
     }
 
     /**
