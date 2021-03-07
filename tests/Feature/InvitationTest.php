@@ -30,7 +30,7 @@ class InvitationTest extends TestCase
 
     }
 
-    public function test_send_invitaton_code_with_email()
+    public function test_authenticated_user_can_send_invitaton_code_with_email()
     {
         Sanctum::actingAs(
             User::factory()->create()
@@ -54,6 +54,16 @@ class InvitationTest extends TestCase
         ]);
 
         $response->assertStatus(422);
+    }
+
+    public function test_unauthenticated_user_cannot_send_invitaton_code()
+    {
+
+        $response = $this->postJson('/api/send-invitation', [
+            'email' => 'test@test.com'
+        ]);
+
+        $response->assertStatus(401);
     }
 
 }
