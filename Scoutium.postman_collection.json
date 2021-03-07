@@ -27,7 +27,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"tunsedres@gmail.com\",\n    \"password\":\"123456\"\n}",
+							"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\":\"123456\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -72,90 +72,13 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Date",
-									"value": "Sat, 06 Mar 2021 12:08:05 GMT"
-								},
-								{
-									"key": "Server",
-									"value": "Apache/2.4.38 (Debian)"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.0.2"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "X-RateLimit-Limit",
-									"value": "60"
-								},
-								{
-									"key": "X-RateLimit-Remaining",
-									"value": "59"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Length",
-									"value": "167"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5, max=100"
-								},
-								{
-									"key": "Connection",
-									"value": "Keep-Alive"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"data\": {\n        \"id\": 16,\n        \"name\": \"Tuncay Elvan\",\n        \"email\": \"tunsedres@gmail.com\",\n        \"created_at\": \"12 hours ago\",\n        \"token\": \"23|3w6ZeOe7C02gCCIyiqcRq4297DtcLz0MczkbImUs\"\n    },\n    \"success\": true\n}"
-						},
-						{
-							"name": "{{docker}}/api/login",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\":\"123456\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{docker}}/api/login",
-									"host": [
-										"{{docker}}"
-									],
-									"path": [
-										"api",
-										"login"
-									]
-								}
-							},
 							"status": "Unauthorized",
 							"code": 401,
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "Date",
-									"value": "Sat, 06 Mar 2021 21:52:21 GMT"
+									"value": "Sun, 07 Mar 2021 10:38:27 GMT"
 								},
 								{
 									"key": "Server",
@@ -187,7 +110,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "88"
+									"value": "86"
 								},
 								{
 									"key": "Keep-Alive",
@@ -203,7 +126,88 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"data\": {\n        \"message\": \"Sorry the credentials you are using are invalid\"\n    },\n    \"success\": \"false\"\n}"
+							"body": "{\n    \"data\": {\n        \"message\": \"Sorry the credentials you are using are invalid\"\n    },\n    \"success\": false\n}"
+						},
+						{
+							"name": "{{docker}}/api/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\":\"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{docker}}/api/login",
+									"host": [
+										"{{docker}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Mar 2021 10:40:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "156"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Test User\",\n        \"email\": \"test@test.com\",\n        \"created_at\": \"10 hours ago\",\n        \"token\": \"2|Qjquw8lmbkZVeMRc4wsaUFJvhnUnH0FrvEh02dZy\"\n    },\n    \"success\": true\n}"
 						}
 					]
 				},
@@ -364,6 +368,94 @@
 									]
 								}
 							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Mar 2021 10:39:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.38 (Debian)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.2"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Length",
+									"value": "98"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"email\": [\n            \"The email has already been taken.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "{{docker}}/api/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Test User\",\n    \"email\":\"test@test.com\",\n    \"password\":\"123456\",\n    \"password_confirmation\":\"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{docker}}/api/register",
+									"host": [
+										"{{docker}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
 							"status": "Created",
 							"code": 201,
 							"_postman_previewlanguage": "json",
@@ -478,7 +570,7 @@
 							"header": [
 								{
 									"key": "Date",
-									"value": "Sat, 06 Mar 2021 12:19:32 GMT"
+									"value": "Sun, 07 Mar 2021 10:41:30 GMT"
 								},
 								{
 									"key": "Server",
@@ -502,7 +594,7 @@
 								},
 								{
 									"key": "X-RateLimit-Remaining",
-									"value": "58"
+									"value": "59"
 								},
 								{
 									"key": "Access-Control-Allow-Origin",
@@ -510,7 +602,7 @@
 								},
 								{
 									"key": "Content-Length",
-									"value": "113"
+									"value": "125"
 								},
 								{
 									"key": "Keep-Alive",
@@ -526,7 +618,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"data\": {\n        \"id\": 16,\n        \"name\": \"Tuncay Elvan\",\n        \"email\": \"tunsedres@gmail.com\",\n        \"created_at\": \"12 hours ago\"\n    },\n    \"success\": true\n}"
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Test User\",\n        \"email\": \"test@test.com\",\n        \"reference_code\": null,\n        \"created_at\": \"10 hours ago\"\n    },\n    \"success\": true\n}"
 						}
 					]
 				}
@@ -542,7 +634,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\" : \"tunsedresss@gmail.com.tr\"\n}",
+							"raw": "{\n    \"email\" : \"tuncay@gmail.com\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -562,7 +654,7 @@
 					},
 					"response": [
 						{
-							"name": "New Request",
+							"name": "already_sent",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -733,7 +825,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "5|wGIUPOHZWgCvX8SHAxDHxVMkuAQhQkl0esDtQqi7",
+				"value": "2|Qjquw8lmbkZVeMRc4wsaUFJvhnUnH0FrvEh02dZy",
 				"type": "string"
 			}
 		]
