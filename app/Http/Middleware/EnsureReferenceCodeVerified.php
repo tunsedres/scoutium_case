@@ -24,10 +24,10 @@ class EnsureReferenceCodeVerified
     }
 
     /**
-     * Handle an incoming request.
+     * Handle if reference code valid.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param Request $request
+     * @param Closure $next
      * @return mixed
      */
     public function handle(Request $request, Closure $next)

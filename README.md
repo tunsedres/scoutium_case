@@ -28,5 +28,5 @@ This application consists of following modules;
 it is done!
    
 * For testing
-    - run "vendor/bin/phpunit" command
+    - run "vendor/bin/phpunit" command (you must run this command inside docker php8 container bash)
 
