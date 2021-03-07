@@ -24,7 +24,7 @@ This application consists of following modules;
 1. Go to the project folder 
 2. Run "composer install" on the command line
 3. Up docker-containers with command "docker-compose up --build -d"
-4. "docker exec -it php8 bash" and run "php artisan migrate"
+4. Run "docker exec php8 php artisan migrate" for creating tables
 it is done!
    
 * For testing
