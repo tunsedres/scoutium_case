@@ -27,15 +27,9 @@ class InvitationController extends Controller
     {
         //validate request
         $this->validate(request(), [
-            'email' => 'required|email'
+            'email' => 'required|unique:user_invitations|email'
         ]);
-
-        //@todo: if this user generate a code for tthis email return a gentle error
-        if($this->checkUserInvitationExist()){
-            return new GeneralResponse(
-                null, 200, 'You have already invited this email!', false
-            );
-        }
+        
 
         $invitation = $this->inviteRepository->create(request()->only('email'));
 
@@ -54,8 +48,4 @@ class InvitationController extends Controller
 
     }
 
-    private function checkUserInvitationExist()
-    {
-        return $this->inviteRepository->findByEmail(request('email'));
-    }
 }
