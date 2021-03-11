@@ -29,7 +29,6 @@ class InvitationController extends Controller
         $this->validate(request(), [
             'email' => 'required|unique:user_invitations|email'
         ]);
-        
 
         $invitation = $this->inviteRepository->create(request()->only('email'));
 
